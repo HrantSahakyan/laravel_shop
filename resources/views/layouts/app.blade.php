@@ -71,7 +71,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    @if(Auth::user()->getUserRole->promission == 'admin')
+                                    @if(Auth::user()->getUserRole->permission == 'admin')
                                         <a class="dropdown-item" href="{{ route('admin.products') }}">
                                             {{ __('Products') }}
                                         </a>

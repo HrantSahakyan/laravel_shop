@@ -17,7 +17,7 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::user() && Auth::user()->getUserRole->promission == 'admin'){
+        if(Auth::user() && Auth::user()->getUserRole->permission == 'admin'){
             return $next($request);
         }
         abort(403);

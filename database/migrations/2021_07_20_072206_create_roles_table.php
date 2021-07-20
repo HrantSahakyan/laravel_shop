@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRoleNameTable extends Migration
+class CreateRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateRoleNameTable extends Migration
      */
     public function up()
     {
-        Schema::create('role_names', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->id();
             $table->string('role_id')->nullable();
-            $table->string('promission');
+            $table->string('permission')->default('user');
             $table->timestamps();
         });
     }
